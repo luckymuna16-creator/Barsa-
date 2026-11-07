@@ -1,0 +1,13 @@
+{
+  "name": "Barsa ❤️",
+  "short_name": "Barsa",
+  "description": "A simple downloader for media you own or are authorized to save.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#09090f",
+  "theme_color": "#09090f",
+  "icons": [
+    {"src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any"}
+  ]
+}

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09090f">
+  <meta name="description" content="Barsa — a simple downloader for media you own or are authorized to save.">
+  <title>Barsa ❤️</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./"><span class="brand-mark">▶</span><span>Barsa <span>❤️</span></span></a>
+    <span class="status"><i></i> Simple · Private</span>
+  </header>
+  <main class="shell">
+    <section class="hero">
+      <div class="eyebrow">YOUR PERSONAL MEDIA TOOL</div>
+      <h1>Save what<br><span>you own.</span></h1>
+      <p class="intro">A clean, simple place to download media files you own or have permission to save.</p>
+    </section>
+
+    <section class="panel">
+      <div class="panel-heading">
+        <div><div class="eyebrow">NEW DOWNLOAD</div><h2>Add a link</h2></div>
+        <span class="shield">🔒 No account</span>
+      </div>
+      <form id="download-form">
+        <label for="media-url">Video or audio link</label>
+        <div class="url-wrap"><span class="url-icon">↗</span><input id="media-url" type="url" inputmode="url" placeholder="Paste a direct media link…" autocomplete="url" required></div>
+        <p class="hint">Direct MP4, WebM, MP3 or M4A links are supported when the source allows browser access.</p>
+        <label for="file-name">File name <span class="optional">· optional</span></label>
+        <input id="file-name" type="text" maxlength="100" placeholder="my-video.mp4">
+        <button class="primary" id="download-btn" type="submit">↓ &nbsp; Download</button>
+      </form>
+
+      <section id="manager" class="manager" hidden aria-live="polite">
+        <div class="manager-top"><strong>Download manager</strong><span id="status-pill" class="status-pill">Queued</span></div>
+        <div class="progress-copy"><span id="progress-label">Preparing…</span><strong id="progress-value">0%</strong></div>
+        <div class="track"><div id="progress-bar"></div></div>
+        <div class="stats">
+          <div><span>Downloaded</span><strong id="downloaded-size">0 B</strong></div>
+          <div><span>File size</span><strong id="file-size">Unknown</strong></div>
+          <div><span>Time left</span><strong id="remaining-time">Calculating…</strong></div>
+        </div>
+      </section>
+      <div id="message" class="message" role="status"></div>
+    </section>
+
+    <section class="notice">
+      <span>ⓘ</span><div><strong>Instagram links</strong><p>Instagram post/reel page links cannot be extracted by this static app. For your own posts, use Instagram’s official download or Accounts Center data export. If you have an authorized direct media-file URL, paste it above.</p><a href="https://accountscenter.instagram.com/info_and_permissions/" target="_blank" rel="noopener noreferrer">Instagram Accounts Center ↗</a></div>
+    </section>
+
+    <footer>Barsa ❤️ <span>·</span> Your media, your control.</footer>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>
